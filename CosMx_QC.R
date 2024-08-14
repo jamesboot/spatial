@@ -2,8 +2,8 @@
 # Written by James Boot 17/05/2024
 
 # Set working directory
-setwd('/data/WHRI-GenomeCentre/shares/Projects/NGS_Projects/NanostringCosMX/Projects/Noorani_Imran/GC-IN-10692')
-analysis.dir <- '/data/WHRI-GenomeCentre/shares/Projects/NGS_Projects/NanostringCosMX/Projects/Noorani_Imran/GC-IN-10692/Analysis/analysis6'
+setwd('/Volumes/My Shared Files/Home/Documents/projects/GC-IM-10692/')
+analysis.dir <- '/Volumes/My Shared Files/Home/Documents/projects/GC-IM-10692/Aug24_Analysis'
 
 # Create folder for results to go in
 if (!dir.exists(analysis.dir)) {
@@ -30,7 +30,7 @@ library(ComplexHeatmap)
 library(openxlsx)
 
 # Path to tiledb directory
-tiledb_Dir <- 'Data/GCIN10692Exp122InitialtileDB/63c710fa-e431-4dcd-b852-87d780af305f_TileDB/'
+tiledb_Dir <- 'AtoMx_tileDB/GCIN10692Exp122InitialtileDB/63c710fa-e431-4dcd-b852-87d780af305f_TileDB/'
 
 # Read in SOMACollection
 tiledb_scdataset <- tiledbsc::SOMACollection$new(uri = tiledb_Dir, 
