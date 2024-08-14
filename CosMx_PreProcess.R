@@ -2,8 +2,8 @@
 # Written by James Boot 17/05/2024
 
 # Set working directory
-setwd('/data/WHRI-GenomeCentre/shares/Projects/NGS_Projects/NanostringCosMX/Projects/Noorani_Imran/GC-IN-10692/Analysis/')
-analysis.dir <- '/data/WHRI-GenomeCentre/shares/Projects/NGS_Projects/NanostringCosMX/Projects/Noorani_Imran/GC-IN-10692/Analysis/analysis6'
+setwd('/Volumes/My Shared Files/Home/Documents/projects/GC-IM-10692/')
+analysis.dir <- '/Volumes/My Shared Files/Home/Documents/projects/GC-IM-10692/Aug24_Analysis'
 
 # Create folder for results to go in
 if (!dir.exists(analysis.dir)) {
@@ -56,9 +56,9 @@ saveRDS(normFilt, file = paste0(analysis.dir, '/normCountsQCfilt.RDS'))
 seuratObj <- CreateSeuratObject(counts = normFilt, assay = 'CosMx')
 
 # Find variable features and scale
-seuratObj <- FindVariableFeatures(seuratObj, selection.method = "vst", nfeatures = 1000)
+seuratObj <- FindVariableFeatures(seuratObj, selection.method = "vst", nfeatures = 500)
 seuratObj[["CosMx"]]$data <- log(seuratObj[["CosMx"]]$counts + 1)
-seuratObj <- ScaleData(seuratObj, block.size = 50000)
+seuratObj <- ScaleData(seuratObj, block.size = 1000)
 
 # Run PCA
 seuratObj <- RunPCA(seuratObj, features = VariableFeatures(object = seuratObj))
