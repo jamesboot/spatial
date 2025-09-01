@@ -1,0 +1,2 @@
+SAMPLE-ID:FASTQ_DIR,FASTQ_DIR:IMAGE_DIR:SLIDE_AREA
+GC-DS-9511-WT1-FP2-WT3-FP2:/data/WHRI-GenomeCentre/shares/Projects/NGS_Projects/10x_Chromium/Schalke_Diana/GC-DS-9511/Analysis/GC-DS-9511_fastq_full/outs/fastq_path/HHVM5BGXK:/data/WHRI-GenomeCentre/shares/Projects/NGS_Projects/10x_Chromium/Schalke_Diana/GC-DS-9511/Process/GC-DS-9511_GEX_HE_211021/TIFs/GC-DS-9511_GEX_HE_211021-A1.tif:A1
